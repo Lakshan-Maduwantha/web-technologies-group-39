@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Search for Blood</title>
+        <link rel="stylesheet" href="ConUs.css">
+        <link rel="stylesheet" href="StyleRec.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <a class="navbar-brand">Navbar</a>
+          
+            <div class="collapse navbar-collapse" id="navbarColor01">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="Home.html">Home
+                    <span class="sr-only">(current)</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Donator.php">Donator</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="receiver.php">Receiver</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Contact Us.html">Contact Us</a>
+                </li>  
+                <li class="nav-item">
+                  <a class="nav-link" href="About Us.html">About Us</a>
+                </li> 
+              </ul>
+            
+            </div>
+          </nav>
+          <br>
+
+          <div class="container">
+            <center> 
+              <h1>Search Box</h1>
+            </center>
+              <div class="form-group">
+                <label for="b_group" style="color: rgb(255, 187, 0); font-size: large;">Blood Group:</label> 
+                <select name="b_group" class="form-control" id="b_group" name="b_group" aria-describedby="b_groupHelp" ng-model="contact.b_group" ng-required="true">
+                  <option value="A+">A+</option>
+                  <option value="A-">A-</option>
+                  <option value="AB+">AB+</option>
+                  <option value="AB-">AB-</option>
+                  <option value="B+">B+</option>
+                  <option value="B-">B-</option>
+                  <option value="O+">O+</option>
+                  <option value="O-">O-</option>
+                 </select> 
+              </div>
+
+              <div class="form-group">
+                <label for="District" style="color: rgb(255, 187, 0); font-size: large;">District</label>
+                <select name="District" class="form-control" id="District" name="District" aria-describedby="DistrictHelp" ng-model="contact.District" ng-required="true">
+                  <option value="Ampara">Ampara</option>
+                  <option value="Anuradhapura">Anuradhapura</option>
+                  <option value="Batticaloa">Batticaloa</option>
+                  <option value="Badulla">Badulla</option>
+                  <option value="Colombo">Colombo</option>
+                  <option value="Galle">Galle</option>
+                  <option value="Gampaha">Gampaha</option>
+                  <option value="Hambantota">Hambantota</option>
+                  <option value="Jaffna">Jaffna</option>
+                  <option value="Kalutara">Kalutara</option>
+                  <option value="Kandy">Kandy</option>
+                  <option value="Kegalle">Kegalle</option>
+                  <option value="Kilinochchi">Kilinochchi</option>
+                  <option value="Kurunegala">Kurunegala</option>
+                  <option value="Mannar">Mannar</option>
+                  <option value="Matale">Matale</option>
+                  <option value="Matara">Matara</option>
+                  <option value="Monaragala">Monaragala</option>
+                  <option value="Mullaitivu">Mullaitivu</option>
+                  <option value="Nuwara Eliya">Nuwara Eliya</option>
+                  <option value="Polonnaruwa">Polonnaruwa</option>
+                  <option value="Puttalam">Puttalam</option>
+                  <option value="Ratnapura">Ratnapura</option>
+                  <option value="Trincomalee">Trincomalee</option>
+                  <option value="Vavuniya">Vavuniya</option>
+                 </select>
+               
+               
+              </div><br>
+              <button type="Search" class="btn btn-info btn-block" ng-disabled="contactForm.$invalid">Search</button>
+              
+          </div>
+          </body>
+          </html>

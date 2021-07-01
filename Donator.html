@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <title>Registration Form</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    
+    
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="Home.html">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Donator.php">Donator</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="receiver.php">Receiver</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Contact Us.html">Contact Us</a>
+          </li>  
+          <li class="nav-item">
+            <a class="nav-link" href="About Us.html">About Us</a>
+          </li> 
+        </ul>
+       
+      </div>
+    </nav>
+    
+   
+    <div class="container-fluid">
+
+        <div class="row justify-content-center align-items-center login-row">
+          <div class="login-form shadow">
+         
+            <form name="contactForm" novalidate>
+              <div class="form-group">
+                <h2 style="color:rgb(216, 31, 201); text-align: center;">Registration Form</style></h2>
+                <br>
+                <label for="NIC" style="font-weight: bold">NIC No:</label>
+                <input type="text" class="form-control" id="NIC" name="NIC" aria-describedby="NICHelp" placeholder="Enter NIC" ng-model="contact.NIC" ng-required="true">
+                <div ng-show="contactForm.LastName.$touched  && contactForm.LastName.$Invalid">
+                  <small style="color: red; display:block; text-align: center;">Enter a valid NIC No:</small>            
+                </div>
+                <br>
+
+              <label for="FirstName" style="font-weight: bold">First Name</label>               
+              <input type="text" class="form-control" id="FirstName" name="FirstName" aria-describedby="FirstNameHelp" placeholder="Enter FirstName"ng-model="contact.FirstName" ng-required="true"/> 
+              <div ng-show="contactForm.LastName.$touched  && contactForm.LastName.$Invalid">
+                <small style="color: red; display:block; text-align: center;">Enter a valid name</small>            
+              </div>
+            </div>
+              <div class="form-group">
+                <label for="LastName" style="font-weight: bold">Last Name</label>
+                <input type="text" class="form-control" id="LastName" name="LastName" aria-describedby="LastNameHelp" placeholder="Enter LastName" ng-model="contact.LastName" ng-required="true"> 
+             <div ng-show="contactForm.LastName.$touched  && contactForm.LastName.$Invalid">
+               <small style="color: red; display:block; text-align: center;">Enter a valid name</small>
+
+             </div>
+                
+              </div>
+              
+              
+          
+              <div class="form-group">
+                <label for="Dob" style="font-weight: bold">Date of Birth:</label>
+                <input type="date" class="form-control" id="Dob" name="Dob" aria-describedby="DobHelp" ng-model="contact.Dob" ng-required="true"> 
+              </div>
+              <div class="form-group">
+                <label for="b_group" style="font-weight: bold">Blood Group:</label> 
+                <select name="b_group" class="form-control" id="b_group" name="b_group" aria-describedby="b_groupHelp" ng-model="contact.b_group" ng-required="true">
+                  <option value="A+">A+</option>
+                  <option value="A-">A-</option>
+                  <option value="AB+">AB+</option>
+                  <option value="AB-">AB-</option>
+                  <option value="B+">B+</option>
+                  <option value="B-">B-</option>
+                  <option value="O+">O+</option>
+                  <option value="O-">O-</option>
+                 </select> 
+              </div>
+
+              
+            <div class="form-group">
+              <label for="ContactNo" style="font-weight: bold">Contact Number</label>
+             
+              <input type="Number" class="form-control" id="ContactNo" aria-describedby="ContactNoHelp" placeholder="Enter Contact Number" ng-model="contact.ContactNo" ng-required="true"> 
+            </div>
+
+            <div class="form-group">
+              <label for="Address" style="font-weight: bold">Address</label><br>
+              <label for="No">No:</label>
+              <input type="text" class="form-control" id="No" name="No" aria-describedby="NoHelp" placeholder="Enter No"ng-model="contact.No" ng-required="true"/>
+              
+              <label for="Street">Street:</label>
+              <input type="text" class="form-control" id="Street" name="Street" aria-describedby="StreetHelp" placeholder="Enter Street"ng-model="contact.Street" ng-required="true"/>
+             
+              <label for="City">City:</label>
+              <input type="text" class="form-control" id="City" name="City" aria-describedby="CityHelp" placeholder="Enter City"ng-model="contact.City" ng-required="true"/>
+          </div>
+            
+              <div class="form-group" >
+                <label for="District" style="font-weight: bold">District</label>
+                <select name="District" class="form-control" id="District" name="District" aria-describedby="DistrictHelp" ng-model="contact.District" ng-required="true">
+                  <option value="Ampara">Ampara</option>
+                  <option value="Anuradhapura">Anuradhapura</option>
+                  <option value="Batticaloa">Batticaloa</option>
+                  <option value="Badulla">Badulla</option>
+                  <option value="Colombo">Colombo</option>
+                  <option value="Galle">Galle</option>
+                  <option value="Gampaha">Gampaha</option>
+                  <option value="Hambantota">Hambantota</option>
+                  <option value="Jaffna">Jaffna</option>
+                  <option value="Kalutara">Kalutara</option>
+                  <option value="Kandy">Kandy</option>
+                  <option value="Kegalle">Kegalle</option>
+                  <option value="Kilinochchi">Kilinochchi</option>
+                  <option value="Kurunegala">Kurunegala</option>
+                  <option value="Mannar">Mannar</option>
+                  <option value="Matale">Matale</option>
+                  <option value="Matara">Matara</option>
+                  <option value="Monaragala">Monaragala</option>
+                  <option value="Mullaitivu">Mullaitivu</option>
+                  <option value="Nuwara Eliya">Nuwara Eliya</option>
+                  <option value="Polonnaruwa">Polonnaruwa</option>
+                  <option value="Puttalam">Puttalam</option>
+                  <option value="Ratnapura">Ratnapura</option>
+                  <option value="Trincomalee">Trincomalee</option>
+                  <option value="Vavuniya">Vavuniya</option>
+                 </select>
+               
+               
+              </div>
+              
+ 
+                <div class="form-group">
+                  <label for="Email" style="font-weight: bold">Email address</label>
+                  <input type="email" class="form-control" id="Email1" name="Email" aria-describedby="emailHelp" placeholder="Enter email" ng-model="contact.email" ng-required="true">
+                  
+                  <div ng-show="contactForm.LastName.$touched  && contactForm.LastName.$Invalid">
+                    <small style="color: red; display:block; text-align: center;">Enter a valid Address</small>
+     
+                  </div><small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                
+                <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-info btn-block" ng-disabled="contactForm.$invalid">Submit</button>
+              </form>
+          </div>
+          
+        
+        </div>
+      </div>
+      <style>
+          body{
+              background: url(DonBack.jpg);
+              background-size: cover;
+          }
+          .login-row{
+              height: 100vh;
+          }
+          .login-form{
+              width: 500px;
+              background-color: rgba(0, 0, 0, 0.5);
+              padding: 20px;
+              margin-top: 40px;
+              margin-bottom: 50px;
+
+          }
+          input.ng-invalid, textarea.ng-invalid{
+            border: 2px solid red;
+          }
+          input[disabled=":disabled"]{
+            opacity: 0.4;
+            cursor: not-allowed !important;
+
+
+                      }
+
+      </style>
+  </body>
+</html>
+    
